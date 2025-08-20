@@ -1,17 +1,17 @@
 {
-  "name": "rehype-twemoji",
+  "name": "@yuna0x0/rehype-twemoji",
   "description": "A rehype plugin to convert emoji to twemoji.",
-  "repository": "https://github.com/NekoChan0122/rehype-twemoji",
-  "author": {
-    "name": "NekoChan",
-    "url": "https://github.com/NekoChan0122"
-  },
+  "repository": "https://github.com/yuna0x0/rehype-twemoji",
+  "contributors": [
+    "NekoChan <aaron74327@gmail.com>",
+    "yuna0x0 <yuna@yuna0x0.com>"
+  ],
   "keywords": [
     "rehype",
     "twemoji",
     "emoji"
   ],
-  "version": "0.0.6",
+  "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -32,20 +32,22 @@
   ],
   "scripts": {
     "dev": "pkgroll --watch",
-    "build": "pkgroll --clean-dist --minify"
+    "build": "pkgroll --clean-dist --minify",
+    "prepare": "pnpm run build"
   },
   "dependencies": {
     "@types/hast": "^3.0.4",
-    "emoji-regex": "^10.3.0",
+    "emoji-regex": "^10.4.0",
     "gemoji": "^8.1.0",
     "hast-util-find-and-replace": "^5.0.1",
-    "hastscript": "^9.0.0",
+    "hastscript": "^9.0.1",
     "twemoji": "^14.0.2",
-    "unified": "^11.0.4"
+    "unified": "^11.0.5"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "pkgroll": "^2.1.0",
-    "typescript": "^5.4.5"
-  }
+    "@types/node": "^24.3.0",
+    "pkgroll": "^2.15.3",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }

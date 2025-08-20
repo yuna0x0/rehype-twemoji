@@ -20,7 +20,9 @@ import type { RehypeTwemojiOptions } from 'rehype-twemoji'
   rehypePlugins: [
     [rehypeTwemoji, {
       format: 'svg',
-      source: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@latest',
+      source: 'https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest',
+      className: 'emoji',
+      ignore: ['©', '®', '™', '℗', '↩'],
     } satisfies RehypeTwemojiOptions],
   ]
 }
@@ -38,10 +40,11 @@ Output:
 <p>
   Hello World
   <img
-    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44b.svg"
+    src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f44b.svg"
     alt="👋"
     aria-label="waving hand"
     data-twemoji=""
+    class="emoji"
   />
 </p>
 ```
@@ -49,7 +52,9 @@ Output:
 ## Options
 
 - `format`: `svg` or `png` (default: `svg`)
-- `source`: source of twemoji (default: `https://cdn.jsdelivr.net/gh/twitter/twemoji@latest`)
+- `source`: source of twemoji (default: `https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest`)
+- `className`: CSS class name to apply to emoji images (optional)
+- `ignore`: array of emoji characters to ignore and not convert to images (optional)
 
 ## Styling
 
