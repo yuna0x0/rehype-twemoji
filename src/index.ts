@@ -14,6 +14,7 @@ type RehypeTwemojiOptions = {
   source?: string;
   className?: string;
   ignore?: string[];
+  draggable?: boolean;
 };
 
 const defaultOptions: RehypeTwemojiOptions = {
@@ -28,6 +29,7 @@ const rehypeTwemoji: Plugin<[RehypeTwemojiOptions?], Root> =
       source,
       className,
       ignore = [],
+      draggable,
     } = Object.assign(defaultOptions, inputOptions);
 
     findAndReplace(tree, [
@@ -52,6 +54,7 @@ const rehypeTwemoji: Plugin<[RehypeTwemojiOptions?], Root> =
             alt: emoji,
             "aria-label": description,
             "data-twemoji": "",
+            ...(draggable !== undefined && { draggable: String(draggable) }),
             ...(className && { class: className }),
           });
         },

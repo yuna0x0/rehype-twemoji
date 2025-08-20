@@ -23,6 +23,7 @@ import type { RehypeTwemojiOptions } from 'rehype-twemoji'
       source: 'https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest',
       className: 'emoji',
       ignore: ['©', '®', '™', '℗', '↩'],
+      draggable: false,
     } satisfies RehypeTwemojiOptions],
   ]
 }
@@ -44,6 +45,7 @@ Output:
     alt="👋"
     aria-label="waving hand"
     data-twemoji=""
+    draggable="false"
     class="emoji"
   />
 </p>
@@ -55,6 +57,7 @@ Output:
 - `source`: source of twemoji (default: `https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest`)
 - `className`: CSS class name to apply to emoji images (optional)
 - `ignore`: array of emoji characters to ignore and not convert to images (optional)
+- `draggable`: whether emoji images are draggable (optional, browser default when not set)
 
 ## Styling
 
