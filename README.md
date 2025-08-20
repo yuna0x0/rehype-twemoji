@@ -5,7 +5,7 @@ A rehype plugin to convert emoji to twemoji.
 ## Install
 
 ```bash
-pnpm i -D rehype-twemoji
+pnpm i -D @yuna0x0/rehype-twemoji
 ```
 
 ## Usage
